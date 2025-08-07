@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#vanta-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;              
+    top: 0;                      
+    left: 0;
+    width: 100%;                 
+    z-index: 10;                 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.logo-button {
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-button:hover {
+    color: #29fa1e;
+}
+
+.defaultNav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.defaultNav li {
+    margin-left: 20px;
+}
+
+.defaultNav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.defaultNav li a:hover, .defaultNav li a.active-page {
+    color: #29fa1e;
+}
+
+.defaultNav li a.active-page {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: #29fa1e;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+}
+
+.icon-link img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+.svg-icon {
+    color: #29fa1e;
+}
