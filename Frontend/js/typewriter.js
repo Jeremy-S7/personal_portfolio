@@ -20,9 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const line1 = document.getElementById('typewriter1');
     const line2 = document.getElementById('typewriter2');
 
+    function typeSocialLabels() {
+        const spans = document.querySelectorAll('.typewriter3');
+        let idx = 0;
+
+        function next() {
+            if (idx < spans.length) {
+                const el = spans[idx++];
+                typeWriter(el, el.dataset.text, 100, () => {
+                    setTimeout(next, 200);
+                });
+            }
+        }
+
+        next();
+    }
+
     typeWriter(line1, line1.dataset.text, 100, () => {
         setTimeout(() => {
-            typeWriter(line2, line2.dataset.text, 100);
+            typeWriter(line2, line2.dataset.text, 100, () => {
+                typeSocialLabels();
+            });
         }, 300);
     });
 });
