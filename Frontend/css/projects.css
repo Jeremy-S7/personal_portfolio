@@ -18,7 +18,6 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: black;
-    padding-top: 60px;
     overflow-x: hidden;
 }
 
@@ -34,7 +33,6 @@ body {
     background-color: black;
     padding: 0 20px;
     height: 60px;
-    box-shadow: 0 2px 5px rgba(56, 55, 55, 0.2);
 }
 
 .logo-button {
@@ -85,7 +83,7 @@ body {
 .content {
     position: relative;
     z-index: 1;
-    margin-top: 0;
+    margin-top: 60px;
     padding: 24px;
 }
 
@@ -198,16 +196,6 @@ body {
     transform: translateY(-1px);
 }
 
-@media (max-width: 992px) {
-    .projects-grid {
-        gap: 18px;
-        padding: 0 20px;
-    }
-    .p-card {
-        grid-template-columns: 40% 1fr;
-    }
-}
-
 @media (max-width: 900px) {
     .navbar {
         height: 54px;
@@ -238,7 +226,7 @@ body {
     }
 }
 
-@media (max-width: 768) {
+@media (max-width: 480px) {
     .logo-button {
         font-size: 22px;
     }
