@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         backgroundColor: 0x000000,
         points: 15.0,
         maxDistance: 20.0,
-        spacing: 18.0,
+        spacing: 19.0,
         showDots: false
     });
 });
