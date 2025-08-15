@@ -93,21 +93,23 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 0.5rem;
     color: white;
 }
 
 .hero .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: white;
+    color: #29fa1e;
 }
 
 .social-links {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
 }
 
 .icon-link {
@@ -115,8 +117,10 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .icon-link img {
@@ -127,4 +131,46 @@ body {
 
 .svg-icon {
     color: #29fa1e;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: 54px;
+        padding: 0 14px;
+    }
+    body {
+        padding-top: 54px;
+    }
+    .logo-button {
+        font-size: 28px;
+    }
+    .defaultNav {
+        flex-wrap: wrap;
+        gap: 10px 14px;
+    }
+    .defaultNav li {
+        margin-left: 0;
+    }
+    .defaultNav li a {
+        font-size: 18px;
+    }
+    .content {
+        margin-top: 0;
+        height: auto;
+        min-height: calc(100vh - 54px);
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-button {
+        font-size: 22px;
+    }
+    .defaultNav li a {
+        font-size: 16px;
+    }
+    .icon-link img {
+        width: 40px;
+        height: 40px;
+    }
 }
