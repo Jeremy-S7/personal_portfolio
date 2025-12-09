@@ -122,17 +122,18 @@ body {
         padding-top: 54px;
     }
     .logo-button {
-        font-size: 28px;
+        font-size: 24px;
+        white-space: nowrap;
     }
     .defaultNav {
-        flex-wrap: wrap;
-        gap: 10px 14px;
+        flex-wrap: nowrap;
+        gap: 0;
     }
     .defaultNav li {
-        margin-left: 0;
+        margin-left: 10px;
     }
     .defaultNav li a {
-        font-size: 18px;
+        font-size: 14px;
     }
     .content {
         max-width: 720px;
@@ -159,10 +160,10 @@ body {
 
 @media (max-width: 480px) {
     .logo-button {
-        font-size: 22px;
+        font-size: 20px;
     }
     .defaultNav li a {
-        font-size: 16px;
+        font-size: 12px;
     }
     .content {
         margin: 80px auto 40px;

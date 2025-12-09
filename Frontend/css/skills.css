@@ -172,17 +172,18 @@ html, body {
         padding-top: 54px;
     }
     .logo-button {
-        font-size: 28px;
+        font-size: 24px;
+        white-space: nowrap;
     }
     .defaultNav {
-        flex-wrap: wrap;
-        gap: 10px 14px;
+        flex-wrap: nowrap;
+        gap: 0;
     }
     .defaultNav li {
-        margin-left: 0;
+        margin-left: 10px;
     }
     .defaultNav li a {
-        font-size: 18px;
+        font-size: 14px;
     }
     .content {
         height: auto;
@@ -207,13 +208,13 @@ html, body {
 
 @media (max-width: 480px) {
     .logo-button {
-        font-size: 22px;
+        font-size: 20px;
     }
     .defaultNav li a {
-        font-size: 16px;
+        font-size: 12px;
     }
     .section-title {
-        font-size: 1.rem;
+        font-size: 1.5rem;
         margin: 0.5rem 0 0.75rem;
     }
     .skill-icon {
