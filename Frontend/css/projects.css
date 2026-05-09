@@ -21,67 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 0 50px;
-    height: 100px;
-    box-shadow: 0 2px 5px rgba(56, 55, 55, 0.2);
-}
-
-.logo-button {
-    display: inline-block;
-    color: white;
-    font-size: 40px;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-}
-
-.logo-button:hover {
-    color: #29fa1e;
-}
-
-.defaultNav {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.defaultNav li {
-    margin-left: 20px;
-}
-
-.defaultNav li a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    transition: color 0.3s ease;
-}
-
-.defaultNav li a:hover,
-.defaultNav li a.active-page {
-    color: #29fa1e;
-}
-
-.defaultNav li a.active-page {
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    color: #29fa1e;
-}
-
 html, body {
     height: 100%;
 }
@@ -126,12 +65,12 @@ html, body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
-    align-items: stretch;  
+    align-items: stretch;
 }
 
 .p-card {
     background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(41, 250, 30, 0.2);   
+    border: 1px solid rgba(41, 250, 30, 0.2);
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     overflow: hidden;
@@ -144,7 +83,7 @@ html, body {
 
 .p-card:hover {
     transform: translateY(-3px);
-    border-color: #29fa1e;                      
+    border-color: #29fa1e;
     box-shadow: 0 12px 30px rgba(41, 250, 30, 0.35);
 }
 
@@ -152,13 +91,8 @@ html, body {
     grid-template-columns: 1fr 36%;
 }
 
-.p-card.media-right .p-media {
-    order: 2;
-}
-
-.p-card.media-right .p-body {
-    order: 1;
-}
+.p-card.media-right .p-media { order: 2; }
+.p-card.media-right .p-body  { order: 1; }
 
 .p-media {
     background: rgba(255, 255, 255, 0.04);
@@ -180,7 +114,7 @@ html, body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    height: 100%;              
+    height: 100%;
 }
 
 .p-title {
@@ -217,7 +151,7 @@ html, body {
 .p-btn {
     display: inline-block;
     margin-top: auto;
-    align-self: flex-start;       /* don't stretch full width */
+    align-self: flex-start;
     padding: 8px 18px;
     border-radius: 8px;
     background: transparent;
@@ -236,33 +170,10 @@ html, body {
 }
 
 @media (max-width: 900px) {
-    .navbar {
-        height: 70px;
-        padding: 0 35px;
-    }
-
     .content {
         margin-top: 70px;
         min-height: calc(100vh - 70px);
         padding: 2rem 1rem 3rem;
-    }
-
-    .logo-button {
-        font-size: 24px;
-        white-space: nowrap;
-    }
-
-    .defaultNav {
-        flex-wrap: nowrap;
-        gap: 0;
-    }
-
-    .defaultNav li {
-        margin-left: 10px;
-    }
-
-    .defaultNav li a {
-        font-size: 14px;
     }
 
     .projects-grid {
@@ -286,14 +197,6 @@ html, body {
 }
 
 @media (max-width: 480px) {
-    .logo-button {
-        font-size: 20px;
-    }
-
-    .defaultNav li a {
-        font-size: 12px;
-    }
-
     .page-title {
         font-size: 1.5rem;
     }

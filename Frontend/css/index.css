@@ -25,67 +25,6 @@ html, body {
     height: 100%;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 0 50px;
-    height: 100px;
-    box-shadow: 0 2px 5px rgba(56, 55, 55, 0.2);
-}
-
-.logo-button {
-    display: inline-block;
-    color: white;
-    font-size: 40px;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-}
-
-.logo-button:hover {
-    color: #29fa1e;
-}
-
-.defaultNav {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.defaultNav li {
-    margin-left: 20px;
-}
-
-.defaultNav li a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    transition: color 0.3s ease;
-}
-
-.defaultNav li a:hover,
-.defaultNav li a.active-page {
-    color: #29fa1e;
-}
-
-.defaultNav li a.active-page {
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    color: #29fa1e;
-}
-
 .content {
     position: relative;
     z-index: 1;
@@ -123,23 +62,23 @@ html, body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: white;                      
-    font-size: 1rem;                    
+    color: white;
+    font-size: 1rem;
     min-width: 44px;
     min-height: 44px;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .icon-link:hover {
-    transform: translateY(-4px);        
-    color: #29fa1e;                     
+    transform: translateY(-4px);
+    color: #29fa1e;
 }
 
 .icon-link img {
     width: 48px;
     height: 48px;
     margin-bottom: 0.5rem;
-    filter: brightness(0) invert(1);    
+    filter: brightness(0) invert(1);
     transition: filter 0.2s ease;
 }
 
@@ -149,29 +88,6 @@ html, body {
 }
 
 @media (max-width: 900px) {
-    .navbar {
-        height: 70px;
-        padding: 0 35px;
-    }
-
-    .logo-button {
-        font-size: 24px;
-        white-space: nowrap;
-    }
-
-    .defaultNav {
-        flex-wrap: nowrap;
-        gap: 0;
-    }
-
-    .defaultNav li {
-        margin-left: 10px;
-    }
-
-    .defaultNav li a {
-        font-size: 14px;
-    }
-
     .content {
         margin-top: 70px;
         height: calc(100vh - 70px);
@@ -180,14 +96,6 @@ html, body {
 }
 
 @media (max-width: 480px) {
-    .logo-button {
-        font-size: 20px;
-    }
-
-    .defaultNav li a {
-        font-size: 12px;
-    }
-
     .icon-link img {
         width: 40px;
         height: 40px;
