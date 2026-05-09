@@ -18,16 +18,19 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: black;
-    padding-top: 60px;
     overflow-x: hidden;
 }
 
+html, body {
+    height: 100%;
+}
+
 .navbar {
-    position: fixed;              
-    top: 0;                      
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;                 
-    z-index: 10;                 
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +75,8 @@ body {
     transition: color 0.3s ease;
 }
 
-.defaultNav li a:hover, .defaultNav li a.active-page {
+.defaultNav li a:hover,
+.defaultNav li a.active-page {
     color: #29fa1e;
 }
 
@@ -82,35 +86,74 @@ body {
     color: #29fa1e;
 }
 
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 100px);
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+}
+
 .content {
+    width: 100%;
     max-width: 900px;
-    margin: 150px auto;
     text-align: center;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.page-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.2rem;
+    color: white;
+    padding-bottom: 0.45rem;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #29fa1e, transparent);
+    border-radius: 2px;
 }
 
 .contact-text {
-    font-size: 22px;
-    color: white;
-    margin-bottom: 40px;
-    line-height: 1.6;
+    font-size: 1.25rem;
+    color: #ccc;
+    line-height: 1.65;
+    max-width: 680px;
 }
 
 .contact-btn {
     display: inline-block;
-    padding: 12px 30px;
-    font-size: 22px;
-    font-weight: bold;
+    padding: 12px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #29fa1e;
-    border: 2px solid #29fa1e;
+    border: 1px solid #29fa1e;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: background 0.25s ease, color 0.25s ease,
+                box-shadow 0.25s ease, transform 0.15s ease;
 }
 
 .contact-btn:hover {
     background-color: #29fa1e;
     color: black;
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 12px rgba(41, 250, 30, 0.5),
+        0 0 28px rgba(41, 250, 30, 0.2);
 }
 
 @media (max-width: 900px) {
@@ -118,43 +161,56 @@ body {
         height: 70px;
         padding: 0 35px;
     }
-    body {
-        padding-top: 70px;
+
+    .content-wrapper {
+        margin-top: 70px;
+        min-height: calc(100vh - 70px);
+        padding: 2rem 1rem;
+        align-items: flex-start;
     }
+
     .logo-button {
         font-size: 24px;
         white-space: nowrap;
     }
+
     .defaultNav {
         flex-wrap: nowrap;
         gap: 0;
     }
+
     .defaultNav li {
         margin-left: 10px;
     }
+
     .defaultNav li a {
         font-size: 14px;
     }
-    .content {
-        max-width: 720px;
-        margin: 120px auto 60px;
-        padding: 16px;
-        text-align: left;
-        min-height: calc(100vh - 54px);
+
+    .page-title {
+        font-size: 1.75rem;
     }
+
     .contact-text {
-        font-size: 18px;
-        line-height: 1.7;
+        font-size: 1.1rem;
+        text-align: left;
     }
+
+    .content {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .page-title::after {
+        left: 0;
+        transform: none;
+    }
+
     .contact-btn {
-        display: block;
         width: 100%;
         max-width: 420px;
-        margin: 0 auto;
-        padding: 12px 20px;
-        font-size: 18px;
-        border-radius: 10px;
         text-align: center;
+        font-size: 1rem;
     }
 }
 
@@ -162,17 +218,21 @@ body {
     .logo-button {
         font-size: 20px;
     }
+
     .defaultNav li a {
         font-size: 12px;
     }
-    .content {
-        margin: 80px auto 40px;
+
+    .page-title {
+        font-size: 1.5rem;
     }
+
     .contact-text {
-        font-size: 16px;
+        font-size: 1rem;
     }
+
     .contact-btn {
-        font-size: 16px;
+        font-size: 0.95rem;
         padding: 12px 18px;
     }
 }
